@@ -1,0 +1,7 @@
+{
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "name": "NutriAgent Orchestrator",
+  "description": "A multi-agent AI system where an Orchestrator gathers food data and a Consultant provides health-specific nutritional advice."
+}
