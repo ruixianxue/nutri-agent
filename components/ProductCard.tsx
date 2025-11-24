@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { ProductData } from '../types';
-import { Package, Search, Activity, ExternalLink } from 'lucide-react';
+import { Package, Search } from 'lucide-react';
 
 interface ProductCardProps {
   data: ProductData;
@@ -108,28 +109,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           {data.ingredients}
         </div>
       </div>
-
-      {/* Web Sources (if WebSearch) */}
-      {data.webSources && data.webSources.length > 0 && (
-        <div className="mt-3 border-t border-slate-100 pt-3">
-          <p className="text-xs font-medium text-slate-500 mb-2">Verified Sources:</p>
-          <div className="flex flex-wrap gap-2">
-            {data.webSources.map((source, idx) => (
-              <a 
-                key={idx}
-                href={source.uri}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1 text-[10px] text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-2 py-1.5 rounded border border-indigo-100 transition-colors max-w-[200px] truncate"
-                title={source.title}
-              >
-                <ExternalLink size={10} className="shrink-0" />
-                <span className="truncate">{source.title}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

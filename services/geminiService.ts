@@ -104,30 +104,13 @@ export const findIngredientsViaWeb = async (productName: string): Promise<Produc
     }
   });
 
-  // Extract text and grounding metadata (source)
   const resultText = response.text || "No ingredients found.";
-  
-  // Extract grounding chunks
-  const webSources: Array<{ title: string; uri: string }> = [];
-  const chunks = response.candidates?.[0]?.groundingMetadata?.groundingChunks;
-  
-  if (chunks) {
-    chunks.forEach(chunk => {
-      if (chunk.web) {
-        webSources.push({
-          title: chunk.web.title || 'Source',
-          uri: chunk.web.uri || '#'
-        });
-      }
-    });
-  }
   
   return {
     name: productName,
     ingredients: resultText,
     source: 'WebSearch',
     imageUrl: 'https://picsum.photos/200/200', // Placeholder as search doesn't guarantee an image URL structure
-    webSources: webSources
   };
 };
 

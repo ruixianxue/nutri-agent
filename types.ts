@@ -1,3 +1,4 @@
+
 export enum AgentRole {
   USER = 'USER',
   ORCHESTRATOR = 'ORCHESTRATOR',
@@ -19,7 +20,6 @@ export interface ProductData {
   source: 'OpenFoodFacts' | 'WebSearch';
   nutriScore?: string;
   nutrientLevels?: NutrientLevels;
-  webSources?: Array<{ title: string; uri: string }>;
 }
 
 export interface HealthAnalysis {
