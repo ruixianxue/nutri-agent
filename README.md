@@ -8,6 +8,10 @@ NutriAgent AI is an open-source, privacy-focused web application that helps you 
 
 ---
 
+## 🎥 Quick Demo
+
+**Try it now:** [https://nutri-agent-7v8j.vercel.app/]
+
 ## 🚀 Why try this?
 
 *   **It's Personal:** Unlike generic Google searches, this agent knows *your* health context.
